@@ -2,8 +2,9 @@
   "matrix": { "rows": 8, "cols": 6},
   "customKeycodes": [
     {"name": "EQ_ARR", "shortName": "=>", "title": "Lambda Arrow"},
-#include "keyboards/ergohaven/vial_keycodes_base.json"
-    ],
+    {"name": "WRD_NXT", "shortName": "Next\nWord", "title": "Jump to next word"},
+    {"name": "WRD_PRV", "shortName": "Prev\nWord", "title": "Jump to previous word"}
+],
   "layouts": {
     "keymap": [
       [ { "x": 3 }, "0,2", { "x": 6.550000000000001 }, "4,2" ],
