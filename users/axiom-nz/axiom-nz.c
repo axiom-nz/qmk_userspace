@@ -5,32 +5,47 @@
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        //BASE LAYER
-        case LT(ALPHA,KC_Z):
+        // NEXT / PREV Word
+        case WRD_NXT:
+            if (record->event.pressed) {
+                register_code16(A(KC_RIGHT));
+            } else
+                unregister_code16(A(KC_RIGHT));
+            return false;
+
+        case WRD_PRV:
+            if (record->event.pressed) {
+                register_code16(A(KC_LEFT));
+            } else
+                unregister_code16(A(KC_LEFT));
+            return false;
+
+        //EDIT TAP
+        case LT(BASE,KC_Z):
             if (!record->tap.count && record->event.pressed) {
                 tap_code16(U_UND); // Intercept hold function to send Cmd-Z
                 return false;
             }
             return true;
-        case LT(ALPHA,KC_X):
+        case LT(BASE,KC_X):
             if (!record->tap.count && record->event.pressed) {
                 tap_code16(U_CUT); // Intercept hold function to send Cmd-X
                 return false;
             }
             return true;
-        case LT(ALPHA,KC_C):
+        case LT(BASE,KC_C):
             if (!record->tap.count && record->event.pressed) {
                 tap_code16(U_CPY); // Intercept hold function to send Cmd-C
                 return false;
             }
             return true;
-        case LT(ALPHA,KC_D):
+        case LT(BASE,KC_D):
             if (!record->tap.count && record->event.pressed) {
                 tap_code16(U_PST); // Intercept hold function to send Cmd-V
                 return false;
             }
             return true;
-        case LT(ALPHA,KC_Y):
+        case LT(BASE,KC_Y):
             if (!record->tap.count && record->event.pressed) {
                 tap_code16(U_RDO); // Intercept hold function to send Cmd-Y
                 return false;
@@ -44,4 +59,25 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             break;
     }
     return true;
+}
+
+
+bool caps_word_press_user(uint16_t keycode) {
+    switch (keycode) {
+        // Keycodes that continue Caps Word, with shift applied.
+        case KC_A ... KC_Z:
+            add_weak_mods(MOD_BIT(KC_LSFT));  // Apply shift to next key.
+            return true;
+
+        // Keycodes that continue Caps Word, without shifting.
+        case KC_1 ... KC_0:
+        case KC_BSPC:
+        case KC_DEL:
+        case KC_MINS:
+        case KC_UNDS:
+            return true;
+
+        default:
+            return false;  // Deactivate Caps Word.
+    }
 }
