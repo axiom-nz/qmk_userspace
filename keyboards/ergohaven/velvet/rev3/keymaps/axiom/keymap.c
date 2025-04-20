@@ -1,5 +1,5 @@
 #include QMK_KEYBOARD_H
-#include "axiom-nz.h"
+#include "axiom.h"
 
 combo_t key_combos[] = {};
 tap_dance_action_t tap_dance_actions[] = {};

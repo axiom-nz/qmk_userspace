@@ -1,4 +1,4 @@
-#include "axiom-nz.h"
+#include "axiom.h"
 #include "quantum.h"
 #include <stdio.h>
 
