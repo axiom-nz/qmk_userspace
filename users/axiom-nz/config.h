@@ -5,14 +5,16 @@
 
 // Tapping Terms
 #undef TAPPING_TERM
-#define TAPPING_TERM 185
+#define TAPPING_TERM 250
 
 #undef QUICK_TAP_TERM
-#define QUICK_TAP_TERM 75
+#define QUICK_TAP_TERM 0
 
 #undef RETRO_TAPPING
 #undef PERMISSIVE_HOLD
 #undef HOLD_ON_OTHER_KEY_PRESS
+
+#define CHORDAL_HOLD
 
 // Caps Word
 #define CAPS_WORD_INVERT_ON_SHIFT
