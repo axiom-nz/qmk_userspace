@@ -1,4 +1,4 @@
-# Axiom-NZ Velvet3 Keymap
+# axiom Velvet3 Keymap
 
 VIA_ENABLE = yes
 VIAL_ENABLE = yes

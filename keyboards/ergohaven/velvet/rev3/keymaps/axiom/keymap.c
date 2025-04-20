@@ -1,5 +1,9 @@
 #include QMK_KEYBOARD_H
-#include "axiom-nz.h"
+#include "axiom.h"
+
+combo_t key_combos[] = {};
+tap_dance_action_t tap_dance_actions[] = {};
+const key_override_t *key_overrides[] = {};
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
