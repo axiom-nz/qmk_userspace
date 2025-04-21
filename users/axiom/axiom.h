@@ -11,8 +11,6 @@ enum custom_keycodes {
     LAYER_PREV,
 };
 
-#define CHORDAL_HOLD
-
 #define PREVWRD   LCTL(KC_LEFT)
 #define NEXTWRD   LCTL(KC_RIGHT)
 #define CTRLUP    LCTL(KC_UP)
