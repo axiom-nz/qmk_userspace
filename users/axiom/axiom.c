@@ -1,24 +1,8 @@
 #include "axiom.h"
 #include "quantum.h"
-#include <stdio.h>
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        // NEXT / PREV Word
-        case WRD_NXT:
-            if (record->event.pressed) {
-                register_code16(A(KC_RIGHT));
-            } else
-                unregister_code16(A(KC_RIGHT));
-            return false;
-
-        case WRD_PRV:
-            if (record->event.pressed) {
-                register_code16(A(KC_LEFT));
-            } else
-                unregister_code16(A(KC_LEFT));
-            return false;
-
         //EDIT TAP
         case LT(BASE,KC_Z):
             if (!record->tap.count && record->event.pressed) {

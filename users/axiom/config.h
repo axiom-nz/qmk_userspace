@@ -5,18 +5,21 @@
 
 // Tapping Terms
 #undef TAPPING_TERM
-#define TAPPING_TERM 250
+#define TAPPING_TERM 200
 
 // Chordal Hold - Formerly Accordian
 #define CHORDAL_HOLD
 #define PERMISSIVE_HOLD
 
-// Disable key repeat for now to diagnose HRM issues
+// Leaving this on leads to frequent no-ops
+// todo: evaluate this setting per key.
+// "PERMISSIVE_HOLD for fingers and space, and HOLD_ON_OTHER_KEY_PRESS for other thumb keys"
+#undef HOLD_ON_OTHER_KEY_PRESS
+
 #undef QUICK_TAP_TERM
-#define QUICK_TAP_TERM 0
+#define QUICK_TAP_TERM 75
 
 #undef RETRO_TAPPING
-#undef HOLD_ON_OTHER_KEY_PRESS
 
 // Caps Word
 #define CAPS_WORD_INVERT_ON_SHIFT
