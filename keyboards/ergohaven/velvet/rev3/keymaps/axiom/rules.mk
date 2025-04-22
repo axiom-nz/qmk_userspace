@@ -1,7 +1,7 @@
 # axiom Velvet3 Keymap
 
-VIA_ENABLE = yes
-VIAL_ENABLE = yes
+VIA_ENABLE = no
+VIAL_ENABLE = no
 
 MOUSEKEY_ENABLE = no    # Mouse keys
 RGBLIGHT_ENABLE = no    # Enable WS2812 RGB underlight.
