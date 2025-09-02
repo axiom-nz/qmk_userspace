@@ -8,25 +8,25 @@ const key_override_t *key_overrides[] = {};
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         [BASE] = LAYOUT( \
-         KC_ESC,  KC_Q,          KC_W,          KC_F,          KC_P,          KC_B,            KC_J, KC_L,         KC_U,         KC_Y,           KC_QUOT,       KC_BSPC,
-         KC_TAB,  LCTL_T(KC_A),  LALT_T(KC_R),  LGUI_T(KC_S),  LSFT_T(KC_T),  KC_G,            KC_M, LSFT_T(KC_N), LGUI_T(KC_E), LALT_T(KC_I),   LCTL_T(KC_O),  KC_SCLN,
-         KC_LSFT, LT(BASE,KC_Z), LT(BASE,KC_X), LT(BASE,KC_C), LT(BASE,KC_D), KC_V,            KC_K, KC_H,         KC_COMM,      ALGR_T(KC_DOT), KC_SLSH,       CW_TOGG,
+         KC_ESC,  KC_Q,          KC_W,          LT(RSYMB, KC_F), LT(NAV, KC_P),   KC_B,            KC_J, KC_L,         KC_U,         KC_Y,           KC_QUOT,       KC_BSPC,
+         KC_TAB,  LCTL_T(KC_A),  LALT_T(KC_R),  LGUI_T(KC_S),    LSFT_T(KC_T),    KC_G,            KC_M, LSFT_T(KC_N), LGUI_T(KC_E), LALT_T(KC_I),   LCTL_T(KC_O),  KC_SCLN,
+         KC_LSFT, LT(BASE,KC_Z), LT(BASE,KC_X), LT(BASE,KC_C),   LT(BASE,KC_D),   KC_V,            KC_K, KC_H,         KC_COMM,      ALGR_T(KC_DOT), KC_SLSH,       CW_TOGG,
 
-                  KC_GRV, KC_LGUI,      KC_ESC, LT(NAV, KC_BSPC), LT(RSYMB, KC_TAB),           LT(SYM, KC_ENT), LT(NUM, KC_SPC), LT(FUN, KC_DEL),   KC_LBRC, KC_RBRC
+                      KC_GRV, KC_LGUI,      KC_ESC, LT(NAV, KC_BSPC), LT(RSYMB, KC_TAB),           LT(SYM, KC_ENT), LT(NUM, KC_SPC), LT(FUN, KC_DEL),   KC_LBRC, KC_RBRC
         ),
 
         [NAV] = LAYOUT( \
          _______, KC_1,    KC_2,    KC_3,    KC_4,     KC_5,            KC_6,    KC_7,    KC_8,     KC_9,    KC_0,     _______,
          _______, _______, _______, _______, _______,  KC_ENT,          KC_CAPS, KC_LEFT, KC_DOWN,  KC_UP,   KC_RIGHT, _______,
          _______, _______, KC_HOME, KC_INS,  KC_END,   KC_DEL,          KC_INS,  KC_HOME, KC_PGDN,  KC_PGUP, KC_END,   _______,
-                  _______, _______, _______, _______, _______,          _______, PREVWRD, NEXTWRD,  _______, _______
+                  _______, _______, _______, _______, _______,          CW_TOGG, PREVWRD, NEXTWRD,  _______, _______
         ),
 
         [RSYMB] = LAYOUT( \
          QK_BOOT, _______, _______, _______, _______, _______,          EQ_ARR,  KC_UNDS, KC_LPRN, KC_RPRN, KC_BSLS,  _______,
          _______, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, _______,          KC_MINS, KC_EQL,  KC_LCBR, KC_RCBR, KC_DQUO,  _______,
          _______, _______, KC_ALGR, _______, _______, _______,          KC_PIPE, KC_PLUS, KC_LBRC, KC_RBRC, KC_SLSH,  _______,
-                  _______, _______, _______, _______, _______,          _______,PREVDSKP,NEXTDSKP, _______, _______
+                  _______, _______, _______, _______, _______,          CW_TOGG,PREVDSKP,NEXTDSKP, _______, _______
         ),
 
         [NUM] = LAYOUT( \
